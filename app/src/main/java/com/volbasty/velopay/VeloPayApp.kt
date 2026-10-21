@@ -2,6 +2,7 @@
 package com.volbasty.velopay
 
 import androidx.compose.foundation.layout.padding
+import androidx.compose.ui.unit.dp
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -74,9 +75,8 @@ private fun PlaceholderScreen(
 ) {
     androidx.compose.foundation.layout.Column(
         modifier = modifier.padding(
-            horizontal = androidx.compose.ui.unit.dp(20),
-            vertical = androidx.compose.ui.unit.dp(24)
-        )
+            horizontal = 20.dp,
+vertical = 24.dp
     ) {
         androidx.compose.material3.Text(
             text = title,
