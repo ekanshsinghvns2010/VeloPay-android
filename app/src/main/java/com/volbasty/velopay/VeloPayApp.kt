@@ -2,6 +2,7 @@
 package com.volbasty.velopay
 
 import androidx.compose.foundation.layout.padding
+import androidx.compose.runtime.collectAsState
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -29,7 +30,7 @@ fun VeloPayApp() {
         factory = HomeViewModelFactory(repository)
     )
 
-    val uiState by homeViewModel.uiState.collectAsStateCompat()
+    val uiState by homeViewModel.uiState.collectAsState()
 
     var selectedDestination by remember {
         mutableStateOf(VeloPayDestination.HOME)
